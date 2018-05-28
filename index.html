@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/commen.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+  	<div class="main">
+  		<div class="banner">
+  			<img src="image/banner.png">
+  		</div>
+  		<div class="video">
+  			<div class="video_bg">
+          <!-- <img src="image/img1.png"> -->
+          <div class="myvideo">
+            <video id="media" src="image/aaa.mp4" id="media"></video>
+            <div class="mycortrol"><img src="image/stop.png"></div>
+          </div>
+  				
+
+  			</div>
+  		</div>
+  		<div class="boxs">
+  			<div class="box box1">
+  				<div class="title">
+  					<img src="image/title1.png">
+  				</div>
+  				<div class="scroll_list">
+  					<ul>
+  						<li></li>
+  					</ul>
+  					<p>（左右滑动可以查看更多菜品）</p>
+  				</div>
+  			</div>
+  			<div class="box box2">
+  				<div class="title">
+  					<img src="image/title2.png">
+  				</div>
+  				<div class="content">
+  					<div class="bg">
+  						<img src="image/img1.png">
+  					</div>
+  				</div>
+  				<div class="environment">
+  					<div class="subtitle">
+  						<div class="left_img">
+  							<img src="image/bg.png">
+  						</div>
+  						<p class="txt1"><img src="image/txt1.png"></p>
+  					</div>
+  					<div class="pic overflow mt">
+  						<div class="fl pic_txt">
+  							<img src="image/txt2.png">
+  						</div>
+  						<di class="fr pic_show">
+  							<div class="bg">
+  								<img src="image/img1.png">
+  							</div>
+  						</di>
+  					</div>
+  					<div class="pic overflow pic2">
+  						<div class="fr pic_txt">
+  							<img src="image/txt3.png">
+  						</div>
+  						<di class="fl pic_show">
+  							<div class="bg">
+  								<img src="image/img1.png">
+  							</div>
+  						</di>
+  					</div>
+  					<div class="footer">
+  						<div class="float_img">
+  							<img src="image/right_img.png">
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+      $(function(){
+        var Media = document.getElementById("media");
+        $('.mycortrol').click(function(){
+          Media.play(); //播放
+          $(this).css('display','none');
+            
+        });
+        Media.onended = function() {
+          $('.mycortrol').css('display','block');
+        };
+
+      })
+    </script>
+  </body>
+</html>
